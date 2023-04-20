@@ -15,7 +15,6 @@ from geometry_msgs.msg import Twist
 from tf2_ros import TransformException
 from tf2_ros.buffer import Buffer
 from tf2_ros.transform_listener import TransformListener
-# from turtlesim.srv import Spawn
 from rclpy.duration import Duration
 from rosgraph_msgs.msg import Log
 
