@@ -1,0 +1,23 @@
+Save pointcloud working without transformation!!
+
+Next steps:
+Apply the lookup table to the TF (see subscriber as example)
+Make transformation before NDT, when the map is being saved
+
+
+MINI STEPS:
+- Codi que subscrigui a TF i crei una taula amb timestamp i tots els valors que trobi (FET - tota la info guardada en una variable taula)
+- Codi que subscrigui a scan, transformi a pc i crei una taula amb timestamp i tots els valors que trobi (FET - tota la info guardada en una variable taula)
+- Combinació de codi que crei les dues taules a la vegada (FET)
+- Codi que faci rounding del timestamp perquè no van a la par i el match entre taules sol es produeix en un punt (FET)
+- Codi amb calling de taules i que faci match de timestamp (FET)
+- Codi que apliqui el TF al scan que toca --- PENDING error entre frames, intentar solucionar amb wait to transform & can transform (ros2??)
+- Aplicar "save as binary pcd" al codi dalt --- PENDING
+
+
+Buddy trial funciona, guarda tots els punts en pcd igual que el turlebot, l'unic que s'ha de canviar el codi pq es subscrigui a /lidar enlloc de /scan (igual que passava amb el AMCL localization)
+
+TOT FET PERÒ HI HA PROBLEMES AMB EL TIMESTAMP
+
+- Fer que el scan esperi el següent /tf i apliqui la transformada - PENDING
+

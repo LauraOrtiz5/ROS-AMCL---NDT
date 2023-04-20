@@ -1,0 +1,1 @@
+/home/laura/ros2_ws/build/nav2_behaviors/ament_cmake_environment_hooks/local_setup.bash
