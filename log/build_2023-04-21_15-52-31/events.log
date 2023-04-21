@@ -1,0 +1,500 @@
+[0.000000] (-) TimerEvent: {}
+[0.000256] (-) JobUnselected: {'identifier': 'costmap_queue'}
+[0.000452] (-) JobUnselected: {'identifier': 'dwb_core'}
+[0.000494] (-) JobUnselected: {'identifier': 'dwb_critics'}
+[0.000521] (-) JobUnselected: {'identifier': 'dwb_msgs'}
+[0.000541] (-) JobUnselected: {'identifier': 'dwb_plugins'}
+[0.000560] (-) JobUnselected: {'identifier': 'nav2_behavior_tree'}
+[0.000579] (-) JobUnselected: {'identifier': 'nav2_behaviors'}
+[0.000597] (-) JobUnselected: {'identifier': 'nav2_bringup'}
+[0.000614] (-) JobUnselected: {'identifier': 'nav2_bt_navigator'}
+[0.000632] (-) JobUnselected: {'identifier': 'nav2_collision_monitor'}
+[0.000649] (-) JobUnselected: {'identifier': 'nav2_common'}
+[0.000666] (-) JobUnselected: {'identifier': 'nav2_constrained_smoother'}
+[0.000683] (-) JobUnselected: {'identifier': 'nav2_controller'}
+[0.000701] (-) JobUnselected: {'identifier': 'nav2_core'}
+[0.000718] (-) JobUnselected: {'identifier': 'nav2_costmap_2d'}
+[0.000735] (-) JobUnselected: {'identifier': 'nav2_dwb_controller'}
+[0.000752] (-) JobUnselected: {'identifier': 'nav2_lifecycle_manager'}
+[0.000769] (-) JobUnselected: {'identifier': 'nav2_map_server'}
+[0.000787] (-) JobUnselected: {'identifier': 'nav2_mppi_controller'}
+[0.000811] (-) JobUnselected: {'identifier': 'nav2_msgs'}
+[0.000829] (-) JobUnselected: {'identifier': 'nav2_navfn_planner'}
+[0.000846] (-) JobUnselected: {'identifier': 'nav2_planner'}
+[0.000863] (-) JobUnselected: {'identifier': 'nav2_regulated_pure_pursuit_controller'}
+[0.000881] (-) JobUnselected: {'identifier': 'nav2_rotation_shim_controller'}
+[0.000898] (-) JobUnselected: {'identifier': 'nav2_rviz_plugins'}
+[0.000915] (-) JobUnselected: {'identifier': 'nav2_simple_commander'}
+[0.000936] (-) JobUnselected: {'identifier': 'nav2_smac_planner'}
+[0.000970] (-) JobUnselected: {'identifier': 'nav2_smoother'}
+[0.000992] (-) JobUnselected: {'identifier': 'nav2_system_tests'}
+[0.001032] (-) JobUnselected: {'identifier': 'nav2_theta_star_planner'}
+[0.001051] (-) JobUnselected: {'identifier': 'nav2_util'}
+[0.001071] (-) JobUnselected: {'identifier': 'nav2_velocity_smoother'}
+[0.001110] (-) JobUnselected: {'identifier': 'nav2_voxel_grid'}
+[0.001128] (-) JobUnselected: {'identifier': 'nav2_waypoint_follower'}
+[0.001148] (-) JobUnselected: {'identifier': 'nav_2d_msgs'}
+[0.001168] (-) JobUnselected: {'identifier': 'nav_2d_utils'}
+[0.001191] (-) JobUnselected: {'identifier': 'navigation2'}
+[0.001749] (-) JobUnselected: {'identifier': 'save_pointcloud'}
+[0.001779] (nav2_amcl) JobQueued: {'identifier': 'nav2_amcl', 'dependencies': OrderedDict([('nav2_common', '/home/laura/ros2_ws/install/nav2_common'), ('nav2_msgs', '/home/laura/ros2_ws/install/nav2_msgs'), ('nav2_util', '/home/laura/ros2_ws/install/nav2_util')])}
+[0.001820] (nav2_amcl) JobStarted: {'identifier': 'nav2_amcl'}
+[0.046900] (nav2_amcl) JobProgress: {'identifier': 'nav2_amcl', 'progress': 'cmake'}
+[0.048334] (nav2_amcl) JobProgress: {'identifier': 'nav2_amcl', 'progress': 'build'}
+[0.049376] (nav2_amcl) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/laura/ros2_ws/build/nav2_amcl', '--', '-j4', '-l4'], 'cwd': '/home/laura/ros2_ws/build/nav2_amcl', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'laura'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/laura/ros2_ws/install/nav2_util/lib:/home/laura/ros2_ws/install/nav2_msgs/lib:/home/laura/ros2_ws/install/nav2_smoother/lib:/home/laura/ros2_ws/install/nav2_controller/lib:/home/laura/ros2_ws/install/dwb_plugins/lib:/home/laura/ros2_ws/install/dwb_critics/lib:/home/laura/ros2_ws/install/dwb_core/lib:/home/laura/ros2_ws/install/nav_2d_utils/lib:/home/laura/ros2_ws/install/dwb_msgs/lib:/home/laura/ros2_ws/install/nav_2d_msgs/lib:/home/laura/ros2_ws/install/nav2_waypoint_follower/lib:/home/laura/ros2_ws/install/nav2_theta_star_planner/lib:/home/laura/ros2_ws/install/nav2_smac_planner/lib:/home/laura/ros2_ws/install/nav2_rotation_shim_controller/lib:/home/laura/ros2_ws/install/nav2_regulated_pure_pursuit_controller/lib:/home/laura/ros2_ws/install/nav2_planner/lib:/home/laura/ros2_ws/install/nav2_navfn_planner/lib:/home/laura/ros2_ws/install/nav2_mppi_controller/lib:/home/laura/ros2_ws/install/nav2_constrained_smoother/lib:/home/laura/ros2_ws/install/nav2_bt_navigator/lib:/home/laura/ros2_ws/install/nav2_behaviors/lib:/home/laura/ros2_ws/install/nav2_collision_monitor/lib:/home/laura/ros2_ws/install/costmap_queue/lib:/home/laura/ros2_ws/install/nav2_costmap_2d/lib:/home/laura/ros2_ws/install/nav2_voxel_grid/lib:/home/laura/ros2_ws/install/nav2_velocity_smoother/lib:/home/laura/ros2_ws/install/nav2_rviz_plugins/lib:/home/laura/ros2_ws/install/nav2_map_server/lib:/home/laura/ros2_ws/install/nav2_lifecycle_manager/lib:/home/laura/ros2_ws/install/nav2_behavior_tree/lib:/home/laura/ros2_ws/install/nav2_amcl/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/laura'), ('OLDPWD', '/home/laura'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('MANAGERPID', '1532'), ('SYSTEMD_EXEC_PID', '1890'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4560'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/laura/ros2_ws/install:/home/laura/colcon_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'laura'), ('JOURNAL_STREAM', '8:33018'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'laura'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:home/laura/ros2_humble/install/nav2_map_server/lib/nav2_map_server'), ('SESSION_MANAGER', 'local/laura-PORTEGE-Z30-A:@/tmp/.ICE-unix/1710,unix/laura-PORTEGE-Z30-A:/tmp/.ICE-unix/1710'), ('INVOCATION_ID', 'd6acdf7f9bb9495b9fd203ee2ba885dc'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.GLOZ31'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/laura/ros2_ws/install/save_pointcloud:/home/laura/ros2_ws/install/nav2_system_tests:/home/laura/ros2_ws/install/nav2_bringup:/home/laura/ros2_ws/install/navigation2:/home/laura/ros2_ws/install/nav2_smoother:/home/laura/ros2_ws/install/nav2_dwb_controller:/home/laura/ros2_ws/install/nav2_controller:/home/laura/ros2_ws/install/dwb_plugins:/home/laura/ros2_ws/install/dwb_critics:/home/laura/ros2_ws/install/dwb_core:/home/laura/ros2_ws/install/nav_2d_utils:/home/laura/ros2_ws/install/dwb_msgs:/home/laura/ros2_ws/install/nav_2d_msgs:/home/laura/ros2_ws/install/nav2_waypoint_follower:/home/laura/ros2_ws/install/nav2_theta_star_planner:/home/laura/ros2_ws/install/nav2_smac_planner:/home/laura/ros2_ws/install/nav2_rotation_shim_controller:/home/laura/ros2_ws/install/nav2_regulated_pure_pursuit_controller:/home/laura/ros2_ws/install/nav2_planner:/home/laura/ros2_ws/install/nav2_navfn_planner:/home/laura/ros2_ws/install/nav2_mppi_controller:/home/laura/ros2_ws/install/nav2_constrained_smoother:/home/laura/ros2_ws/install/nav2_bt_navigator:/home/laura/ros2_ws/install/nav2_behaviors:/home/laura/ros2_ws/install/nav2_core:/home/laura/ros2_ws/install/nav2_collision_monitor:/home/laura/ros2_ws/install/costmap_queue:/home/laura/ros2_ws/install/nav2_costmap_2d:/home/laura/ros2_ws/install/nav2_voxel_grid:/home/laura/ros2_ws/install/nav2_velocity_smoother:/home/laura/ros2_ws/install/nav2_rviz_plugins:/home/laura/ros2_ws/install/nav2_map_server:/home/laura/ros2_ws/install/nav2_lifecycle_manager:/home/laura/ros2_ws/install/nav2_behavior_tree:/home/laura/ros2_ws/install/nav2_amcl:/home/laura/ros2_ws/install/nav2_util:/home/laura/ros2_ws/install/nav2_simple_commander:/home/laura/ros2_ws/install/nav2_msgs:/home/laura/ros2_ws/install/nav2_common:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:bb0ba77d-62b1-4677-982b-a40ade48a9ed'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/laura/ros2_ws/build/nav2_amcl'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages:/home/laura/ros2_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/home/laura/ros2_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/home/laura/ros2_ws/build/nav2_simple_commander:/home/laura/ros2_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/home/laura/ros2_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/home/laura/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/laura/ros2_ws/install/nav2_util:/home/laura/ros2_ws/install/nav2_msgs:/home/laura/ros2_ws/install/nav2_common:/home/laura/ros2_ws/install/nav2_system_tests:/home/laura/ros2_ws/install/nav2_bringup:/home/laura/ros2_ws/install/navigation2:/home/laura/ros2_ws/install/nav2_smoother:/home/laura/ros2_ws/install/nav2_dwb_controller:/home/laura/ros2_ws/install/nav2_controller:/home/laura/ros2_ws/install/dwb_plugins:/home/laura/ros2_ws/install/dwb_critics:/home/laura/ros2_ws/install/dwb_core:/home/laura/ros2_ws/install/nav_2d_utils:/home/laura/ros2_ws/install/dwb_msgs:/home/laura/ros2_ws/install/nav_2d_msgs:/home/laura/ros2_ws/install/nav2_waypoint_follower:/home/laura/ros2_ws/install/nav2_theta_star_planner:/home/laura/ros2_ws/install/nav2_smac_planner:/home/laura/ros2_ws/install/nav2_rotation_shim_controller:/home/laura/ros2_ws/install/nav2_regulated_pure_pursuit_controller:/home/laura/ros2_ws/install/nav2_planner:/home/laura/ros2_ws/install/nav2_navfn_planner:/home/laura/ros2_ws/install/nav2_mppi_controller:/home/laura/ros2_ws/install/nav2_constrained_smoother:/home/laura/ros2_ws/install/nav2_bt_navigator:/home/laura/ros2_ws/install/nav2_behaviors:/home/laura/ros2_ws/install/nav2_core:/home/laura/ros2_ws/install/nav2_collision_monitor:/home/laura/ros2_ws/install/costmap_queue:/home/laura/ros2_ws/install/nav2_costmap_2d:/home/laura/ros2_ws/install/nav2_voxel_grid:/home/laura/ros2_ws/install/nav2_velocity_smoother:/home/laura/ros2_ws/install/nav2_rviz_plugins:/home/laura/ros2_ws/install/nav2_map_server:/home/laura/ros2_ws/install/nav2_lifecycle_manager:/home/laura/ros2_ws/install/nav2_behavior_tree:/home/laura/ros2_ws/install/nav2_amcl:/home/laura/test_msgs:/home/laura/ros2_ws/install/save_pointcloud:/home/laura/ros2_ws/install/nav2_simple_commander:/opt/ros/humble')]), 'shell': False}
+[0.098486] (-) TimerEvent: {}
+[0.198796] (-) TimerEvent: {}
+[0.214542] (nav2_amcl) StdoutLine: {'line': b'[ 29%] Built target pf_lib\n'}
+[0.219631] (nav2_amcl) StdoutLine: {'line': b'[ 50%] Built target map_lib\n'}
+[0.262105] (nav2_amcl) StdoutLine: {'line': b'[ 70%] Built target sensors_lib\n'}
+[0.265922] (nav2_amcl) StdoutLine: {'line': b'[ 83%] Built target motions_lib\n'}
+[0.285683] (nav2_amcl) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target amcl_core\x1b[0m\n'}
+[0.298914] (-) TimerEvent: {}
+[0.357993] (nav2_amcl) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/amcl_core.dir/src/amcl_node.cpp.o\x1b[0m\n'}
+[0.399049] (-) TimerEvent: {}
+[0.499406] (-) TimerEvent: {}
+[0.599736] (-) TimerEvent: {}
+[0.700039] (-) TimerEvent: {}
+[0.800364] (-) TimerEvent: {}
+[0.900703] (-) TimerEvent: {}
+[1.001053] (-) TimerEvent: {}
+[1.101390] (-) TimerEvent: {}
+[1.201733] (-) TimerEvent: {}
+[1.302077] (-) TimerEvent: {}
+[1.402415] (-) TimerEvent: {}
+[1.502764] (-) TimerEvent: {}
+[1.603101] (-) TimerEvent: {}
+[1.703449] (-) TimerEvent: {}
+[1.803802] (-) TimerEvent: {}
+[1.904179] (-) TimerEvent: {}
+[2.004559] (-) TimerEvent: {}
+[2.104894] (-) TimerEvent: {}
+[2.205237] (-) TimerEvent: {}
+[2.305578] (-) TimerEvent: {}
+[2.405905] (-) TimerEvent: {}
+[2.506254] (-) TimerEvent: {}
+[2.606613] (-) TimerEvent: {}
+[2.706962] (-) TimerEvent: {}
+[2.807316] (-) TimerEvent: {}
+[2.907666] (-) TimerEvent: {}
+[3.008132] (-) TimerEvent: {}
+[3.108539] (-) TimerEvent: {}
+[3.208938] (-) TimerEvent: {}
+[3.309361] (-) TimerEvent: {}
+[3.409763] (-) TimerEvent: {}
+[3.510146] (-) TimerEvent: {}
+[3.610508] (-) TimerEvent: {}
+[3.710865] (-) TimerEvent: {}
+[3.811219] (-) TimerEvent: {}
+[3.911563] (-) TimerEvent: {}
+[4.011910] (-) TimerEvent: {}
+[4.112260] (-) TimerEvent: {}
+[4.212576] (-) TimerEvent: {}
+[4.312908] (-) TimerEvent: {}
+[4.413255] (-) TimerEvent: {}
+[4.513596] (-) TimerEvent: {}
+[4.613939] (-) TimerEvent: {}
+[4.714278] (-) TimerEvent: {}
+[4.814621] (-) TimerEvent: {}
+[4.914966] (-) TimerEvent: {}
+[5.015314] (-) TimerEvent: {}
+[5.115658] (-) TimerEvent: {}
+[5.216031] (-) TimerEvent: {}
+[5.316370] (-) TimerEvent: {}
+[5.416703] (-) TimerEvent: {}
+[5.517054] (-) TimerEvent: {}
+[5.617415] (-) TimerEvent: {}
+[5.717760] (-) TimerEvent: {}
+[5.818120] (-) TimerEvent: {}
+[5.918511] (-) TimerEvent: {}
+[6.018885] (-) TimerEvent: {}
+[6.119208] (-) TimerEvent: {}
+[6.219559] (-) TimerEvent: {}
+[6.319910] (-) TimerEvent: {}
+[6.420310] (-) TimerEvent: {}
+[6.520713] (-) TimerEvent: {}
+[6.621057] (-) TimerEvent: {}
+[6.721414] (-) TimerEvent: {}
+[6.821768] (-) TimerEvent: {}
+[6.922115] (-) TimerEvent: {}
+[7.022459] (-) TimerEvent: {}
+[7.122807] (-) TimerEvent: {}
+[7.223150] (-) TimerEvent: {}
+[7.323502] (-) TimerEvent: {}
+[7.423848] (-) TimerEvent: {}
+[7.524198] (-) TimerEvent: {}
+[7.624552] (-) TimerEvent: {}
+[7.724932] (-) TimerEvent: {}
+[7.825331] (-) TimerEvent: {}
+[7.925725] (-) TimerEvent: {}
+[8.026117] (-) TimerEvent: {}
+[8.127221] (-) TimerEvent: {}
+[8.227559] (-) TimerEvent: {}
+[8.327910] (-) TimerEvent: {}
+[8.428254] (-) TimerEvent: {}
+[8.528603] (-) TimerEvent: {}
+[8.628944] (-) TimerEvent: {}
+[8.729277] (-) TimerEvent: {}
+[8.829627] (-) TimerEvent: {}
+[8.929968] (-) TimerEvent: {}
+[9.030314] (-) TimerEvent: {}
+[9.130660] (-) TimerEvent: {}
+[9.231018] (-) TimerEvent: {}
+[9.331390] (-) TimerEvent: {}
+[9.431813] (-) TimerEvent: {}
+[9.532166] (-) TimerEvent: {}
+[9.632541] (-) TimerEvent: {}
+[9.732901] (-) TimerEvent: {}
+[9.833280] (-) TimerEvent: {}
+[9.933652] (-) TimerEvent: {}
+[10.034010] (-) TimerEvent: {}
+[10.134394] (-) TimerEvent: {}
+[10.234757] (-) TimerEvent: {}
+[10.335098] (-) TimerEvent: {}
+[10.435418] (-) TimerEvent: {}
+[10.535734] (-) TimerEvent: {}
+[10.636062] (-) TimerEvent: {}
+[10.736423] (-) TimerEvent: {}
+[10.836830] (-) TimerEvent: {}
+[10.937193] (-) TimerEvent: {}
+[11.037517] (-) TimerEvent: {}
+[11.137853] (-) TimerEvent: {}
+[11.238183] (-) TimerEvent: {}
+[11.338535] (-) TimerEvent: {}
+[11.438868] (-) TimerEvent: {}
+[11.539207] (-) TimerEvent: {}
+[11.639542] (-) TimerEvent: {}
+[11.739884] (-) TimerEvent: {}
+[11.840204] (-) TimerEvent: {}
+[11.940548] (-) TimerEvent: {}
+[12.040899] (-) TimerEvent: {}
+[12.141270] (-) TimerEvent: {}
+[12.241660] (-) TimerEvent: {}
+[12.342036] (-) TimerEvent: {}
+[12.442391] (-) TimerEvent: {}
+[12.542787] (-) TimerEvent: {}
+[12.643142] (-) TimerEvent: {}
+[12.743490] (-) TimerEvent: {}
+[12.843850] (-) TimerEvent: {}
+[12.944196] (-) TimerEvent: {}
+[13.044559] (-) TimerEvent: {}
+[13.145016] (-) TimerEvent: {}
+[13.245465] (-) TimerEvent: {}
+[13.345860] (-) TimerEvent: {}
+[13.446203] (-) TimerEvent: {}
+[13.546570] (-) TimerEvent: {}
+[13.646915] (-) TimerEvent: {}
+[13.747260] (-) TimerEvent: {}
+[13.847582] (-) TimerEvent: {}
+[13.947922] (-) TimerEvent: {}
+[14.048264] (-) TimerEvent: {}
+[14.148611] (-) TimerEvent: {}
+[14.248955] (-) TimerEvent: {}
+[14.349302] (-) TimerEvent: {}
+[14.449646] (-) TimerEvent: {}
+[14.549989] (-) TimerEvent: {}
+[14.650331] (-) TimerEvent: {}
+[14.750674] (-) TimerEvent: {}
+[14.850990] (-) TimerEvent: {}
+[14.951333] (-) TimerEvent: {}
+[15.051672] (-) TimerEvent: {}
+[15.152014] (-) TimerEvent: {}
+[15.252358] (-) TimerEvent: {}
+[15.352699] (-) TimerEvent: {}
+[15.453068] (-) TimerEvent: {}
+[15.553439] (-) TimerEvent: {}
+[15.653783] (-) TimerEvent: {}
+[15.754127] (-) TimerEvent: {}
+[15.854469] (-) TimerEvent: {}
+[15.954810] (-) TimerEvent: {}
+[16.055157] (-) TimerEvent: {}
+[16.155506] (-) TimerEvent: {}
+[16.255853] (-) TimerEvent: {}
+[16.356181] (-) TimerEvent: {}
+[16.456540] (-) TimerEvent: {}
+[16.556878] (-) TimerEvent: {}
+[16.657222] (-) TimerEvent: {}
+[16.757628] (-) TimerEvent: {}
+[16.858386] (-) TimerEvent: {}
+[16.958846] (-) TimerEvent: {}
+[17.059228] (-) TimerEvent: {}
+[17.159571] (-) TimerEvent: {}
+[17.259927] (-) TimerEvent: {}
+[17.360278] (-) TimerEvent: {}
+[17.460583] (-) TimerEvent: {}
+[17.560955] (-) TimerEvent: {}
+[17.661301] (-) TimerEvent: {}
+[17.761651] (-) TimerEvent: {}
+[17.862002] (-) TimerEvent: {}
+[17.962348] (-) TimerEvent: {}
+[18.062697] (-) TimerEvent: {}
+[18.163043] (-) TimerEvent: {}
+[18.263395] (-) TimerEvent: {}
+[18.363750] (-) TimerEvent: {}
+[18.464105] (-) TimerEvent: {}
+[18.564447] (-) TimerEvent: {}
+[18.664783] (-) TimerEvent: {}
+[18.765121] (-) TimerEvent: {}
+[18.865463] (-) TimerEvent: {}
+[18.965819] (-) TimerEvent: {}
+[19.066169] (-) TimerEvent: {}
+[19.166519] (-) TimerEvent: {}
+[19.266864] (-) TimerEvent: {}
+[19.367188] (-) TimerEvent: {}
+[19.467559] (-) TimerEvent: {}
+[19.567944] (-) TimerEvent: {}
+[19.668332] (-) TimerEvent: {}
+[19.768728] (-) TimerEvent: {}
+[19.869047] (-) TimerEvent: {}
+[19.969403] (-) TimerEvent: {}
+[20.069765] (-) TimerEvent: {}
+[20.170081] (-) TimerEvent: {}
+[20.270406] (-) TimerEvent: {}
+[20.370766] (-) TimerEvent: {}
+[20.471082] (-) TimerEvent: {}
+[20.571398] (-) TimerEvent: {}
+[20.671712] (-) TimerEvent: {}
+[20.772029] (-) TimerEvent: {}
+[20.872344] (-) TimerEvent: {}
+[20.972652] (-) TimerEvent: {}
+[21.072956] (-) TimerEvent: {}
+[21.173272] (-) TimerEvent: {}
+[21.273580] (-) TimerEvent: {}
+[21.373888] (-) TimerEvent: {}
+[21.474252] (-) TimerEvent: {}
+[21.574614] (-) TimerEvent: {}
+[21.674984] (-) TimerEvent: {}
+[21.775336] (-) TimerEvent: {}
+[21.875687] (-) TimerEvent: {}
+[21.976028] (-) TimerEvent: {}
+[22.076377] (-) TimerEvent: {}
+[22.176732] (-) TimerEvent: {}
+[22.277064] (-) TimerEvent: {}
+[22.377399] (-) TimerEvent: {}
+[22.477742] (-) TimerEvent: {}
+[22.578074] (-) TimerEvent: {}
+[22.678406] (-) TimerEvent: {}
+[22.778747] (-) TimerEvent: {}
+[22.879094] (-) TimerEvent: {}
+[22.979447] (-) TimerEvent: {}
+[23.079790] (-) TimerEvent: {}
+[23.180128] (-) TimerEvent: {}
+[23.280441] (-) TimerEvent: {}
+[23.380781] (-) TimerEvent: {}
+[23.481096] (-) TimerEvent: {}
+[23.581446] (-) TimerEvent: {}
+[23.681787] (-) TimerEvent: {}
+[23.782116] (-) TimerEvent: {}
+[23.882440] (-) TimerEvent: {}
+[23.982780] (-) TimerEvent: {}
+[24.083122] (-) TimerEvent: {}
+[24.183469] (-) TimerEvent: {}
+[24.283810] (-) TimerEvent: {}
+[24.384144] (-) TimerEvent: {}
+[24.484507] (-) TimerEvent: {}
+[24.584846] (-) TimerEvent: {}
+[24.685187] (-) TimerEvent: {}
+[24.785550] (-) TimerEvent: {}
+[24.885949] (-) TimerEvent: {}
+[24.986337] (-) TimerEvent: {}
+[25.086684] (-) TimerEvent: {}
+[25.187022] (-) TimerEvent: {}
+[25.287369] (-) TimerEvent: {}
+[25.387711] (-) TimerEvent: {}
+[25.488046] (-) TimerEvent: {}
+[25.588393] (-) TimerEvent: {}
+[25.688763] (-) TimerEvent: {}
+[25.789116] (-) TimerEvent: {}
+[25.889462] (-) TimerEvent: {}
+[25.989814] (-) TimerEvent: {}
+[26.090155] (-) TimerEvent: {}
+[26.190608] (-) TimerEvent: {}
+[26.291026] (-) TimerEvent: {}
+[26.391413] (-) TimerEvent: {}
+[26.491801] (-) TimerEvent: {}
+[26.592166] (-) TimerEvent: {}
+[26.692550] (-) TimerEvent: {}
+[26.792897] (-) TimerEvent: {}
+[26.893233] (-) TimerEvent: {}
+[26.993564] (-) TimerEvent: {}
+[27.093902] (-) TimerEvent: {}
+[27.194240] (-) TimerEvent: {}
+[27.294581] (-) TimerEvent: {}
+[27.394912] (-) TimerEvent: {}
+[27.495257] (-) TimerEvent: {}
+[27.595598] (-) TimerEvent: {}
+[27.695924] (-) TimerEvent: {}
+[27.796255] (-) TimerEvent: {}
+[27.896691] (-) TimerEvent: {}
+[27.997069] (-) TimerEvent: {}
+[28.097442] (-) TimerEvent: {}
+[28.197820] (-) TimerEvent: {}
+[28.298205] (-) TimerEvent: {}
+[28.398636] (-) TimerEvent: {}
+[28.498988] (-) TimerEvent: {}
+[28.599338] (-) TimerEvent: {}
+[28.699689] (-) TimerEvent: {}
+[28.800034] (-) TimerEvent: {}
+[28.900398] (-) TimerEvent: {}
+[29.000783] (-) TimerEvent: {}
+[29.101127] (-) TimerEvent: {}
+[29.201464] (-) TimerEvent: {}
+[29.301803] (-) TimerEvent: {}
+[29.402161] (-) TimerEvent: {}
+[29.502544] (-) TimerEvent: {}
+[29.602907] (-) TimerEvent: {}
+[29.703227] (-) TimerEvent: {}
+[29.803539] (-) TimerEvent: {}
+[29.903867] (-) TimerEvent: {}
+[30.004212] (-) TimerEvent: {}
+[30.104573] (-) TimerEvent: {}
+[30.204891] (-) TimerEvent: {}
+[30.305234] (-) TimerEvent: {}
+[30.405578] (-) TimerEvent: {}
+[30.505903] (-) TimerEvent: {}
+[30.606250] (-) TimerEvent: {}
+[30.706567] (-) TimerEvent: {}
+[30.806895] (-) TimerEvent: {}
+[30.907291] (-) TimerEvent: {}
+[31.007683] (-) TimerEvent: {}
+[31.108081] (-) TimerEvent: {}
+[31.208460] (-) TimerEvent: {}
+[31.308819] (-) TimerEvent: {}
+[31.409153] (-) TimerEvent: {}
+[31.509492] (-) TimerEvent: {}
+[31.609821] (-) TimerEvent: {}
+[31.710155] (-) TimerEvent: {}
+[31.810495] (-) TimerEvent: {}
+[31.910839] (-) TimerEvent: {}
+[32.011189] (-) TimerEvent: {}
+[32.111536] (-) TimerEvent: {}
+[32.211870] (-) TimerEvent: {}
+[32.312225] (-) TimerEvent: {}
+[32.412577] (-) TimerEvent: {}
+[32.512916] (-) TimerEvent: {}
+[32.613248] (-) TimerEvent: {}
+[32.713577] (-) TimerEvent: {}
+[32.813915] (-) TimerEvent: {}
+[32.914246] (-) TimerEvent: {}
+[33.014587] (-) TimerEvent: {}
+[33.114925] (-) TimerEvent: {}
+[33.215268] (-) TimerEvent: {}
+[33.315611] (-) TimerEvent: {}
+[33.415946] (-) TimerEvent: {}
+[33.516293] (-) TimerEvent: {}
+[33.616621] (-) TimerEvent: {}
+[33.716948] (-) TimerEvent: {}
+[33.817284] (-) TimerEvent: {}
+[33.917614] (-) TimerEvent: {}
+[34.017953] (-) TimerEvent: {}
+[34.118287] (-) TimerEvent: {}
+[34.218659] (-) TimerEvent: {}
+[34.319034] (-) TimerEvent: {}
+[34.419397] (-) TimerEvent: {}
+[34.519747] (-) TimerEvent: {}
+[34.620080] (-) TimerEvent: {}
+[34.720438] (-) TimerEvent: {}
+[34.820802] (-) TimerEvent: {}
+[34.921114] (-) TimerEvent: {}
+[35.021436] (-) TimerEvent: {}
+[35.121790] (-) TimerEvent: {}
+[35.222128] (-) TimerEvent: {}
+[35.322477] (-) TimerEvent: {}
+[35.422824] (-) TimerEvent: {}
+[35.523179] (-) TimerEvent: {}
+[35.623549] (-) TimerEvent: {}
+[35.723929] (-) TimerEvent: {}
+[35.824312] (-) TimerEvent: {}
+[35.924748] (-) TimerEvent: {}
+[36.025104] (-) TimerEvent: {}
+[36.125434] (-) TimerEvent: {}
+[36.225780] (-) TimerEvent: {}
+[36.326130] (-) TimerEvent: {}
+[36.426465] (-) TimerEvent: {}
+[36.526813] (-) TimerEvent: {}
+[36.627173] (-) TimerEvent: {}
+[36.727512] (-) TimerEvent: {}
+[36.827936] (-) TimerEvent: {}
+[36.928297] (-) TimerEvent: {}
+[37.028671] (-) TimerEvent: {}
+[37.129037] (-) TimerEvent: {}
+[37.229343] (-) TimerEvent: {}
+[37.329671] (-) TimerEvent: {}
+[37.430020] (-) TimerEvent: {}
+[37.530354] (-) TimerEvent: {}
+[37.630686] (-) TimerEvent: {}
+[37.731037] (-) TimerEvent: {}
+[37.831377] (-) TimerEvent: {}
+[37.931713] (-) TimerEvent: {}
+[38.032039] (-) TimerEvent: {}
+[38.132370] (-) TimerEvent: {}
+[38.232680] (-) TimerEvent: {}
+[38.333032] (-) TimerEvent: {}
+[38.433384] (-) TimerEvent: {}
+[38.462314] (nav2_amcl) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX shared library libamcl_core.so\x1b[0m\n'}
+[38.533515] (-) TimerEvent: {}
+[38.633850] (-) TimerEvent: {}
+[38.734224] (-) TimerEvent: {}
+[38.834702] (-) TimerEvent: {}
+[38.935259] (-) TimerEvent: {}
+[39.035655] (-) TimerEvent: {}
+[39.135964] (-) TimerEvent: {}
+[39.141546] (nav2_amcl) StdoutLine: {'line': b'[ 91%] Built target amcl_core\n'}
+[39.185496] (nav2_amcl) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX executable amcl\x1b[0m\n'}
+[39.236094] (-) TimerEvent: {}
+[39.336426] (-) TimerEvent: {}
+[39.436844] (-) TimerEvent: {}
+[39.537181] (-) TimerEvent: {}
+[39.572177] (nav2_amcl) StdoutLine: {'line': b'[100%] Built target amcl\n'}
+[39.587421] (nav2_amcl) CommandEnded: {'returncode': 0}
+[39.637284] (-) TimerEvent: {}
+[39.644007] (nav2_amcl) JobProgress: {'identifier': 'nav2_amcl', 'progress': 'install'}
+[39.657228] (nav2_amcl) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/laura/ros2_ws/build/nav2_amcl'], 'cwd': '/home/laura/ros2_ws/build/nav2_amcl', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'laura'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/laura/ros2_ws/install/nav2_util/lib:/home/laura/ros2_ws/install/nav2_msgs/lib:/home/laura/ros2_ws/install/nav2_smoother/lib:/home/laura/ros2_ws/install/nav2_controller/lib:/home/laura/ros2_ws/install/dwb_plugins/lib:/home/laura/ros2_ws/install/dwb_critics/lib:/home/laura/ros2_ws/install/dwb_core/lib:/home/laura/ros2_ws/install/nav_2d_utils/lib:/home/laura/ros2_ws/install/dwb_msgs/lib:/home/laura/ros2_ws/install/nav_2d_msgs/lib:/home/laura/ros2_ws/install/nav2_waypoint_follower/lib:/home/laura/ros2_ws/install/nav2_theta_star_planner/lib:/home/laura/ros2_ws/install/nav2_smac_planner/lib:/home/laura/ros2_ws/install/nav2_rotation_shim_controller/lib:/home/laura/ros2_ws/install/nav2_regulated_pure_pursuit_controller/lib:/home/laura/ros2_ws/install/nav2_planner/lib:/home/laura/ros2_ws/install/nav2_navfn_planner/lib:/home/laura/ros2_ws/install/nav2_mppi_controller/lib:/home/laura/ros2_ws/install/nav2_constrained_smoother/lib:/home/laura/ros2_ws/install/nav2_bt_navigator/lib:/home/laura/ros2_ws/install/nav2_behaviors/lib:/home/laura/ros2_ws/install/nav2_collision_monitor/lib:/home/laura/ros2_ws/install/costmap_queue/lib:/home/laura/ros2_ws/install/nav2_costmap_2d/lib:/home/laura/ros2_ws/install/nav2_voxel_grid/lib:/home/laura/ros2_ws/install/nav2_velocity_smoother/lib:/home/laura/ros2_ws/install/nav2_rviz_plugins/lib:/home/laura/ros2_ws/install/nav2_map_server/lib:/home/laura/ros2_ws/install/nav2_lifecycle_manager/lib:/home/laura/ros2_ws/install/nav2_behavior_tree/lib:/home/laura/ros2_ws/install/nav2_amcl/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/laura'), ('OLDPWD', '/home/laura'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('MANAGERPID', '1532'), ('SYSTEMD_EXEC_PID', '1890'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4560'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/laura/ros2_ws/install:/home/laura/colcon_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'laura'), ('JOURNAL_STREAM', '8:33018'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'laura'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:home/laura/ros2_humble/install/nav2_map_server/lib/nav2_map_server'), ('SESSION_MANAGER', 'local/laura-PORTEGE-Z30-A:@/tmp/.ICE-unix/1710,unix/laura-PORTEGE-Z30-A:/tmp/.ICE-unix/1710'), ('INVOCATION_ID', 'd6acdf7f9bb9495b9fd203ee2ba885dc'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.GLOZ31'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '30'), ('AMENT_PREFIX_PATH', '/home/laura/ros2_ws/install/save_pointcloud:/home/laura/ros2_ws/install/nav2_system_tests:/home/laura/ros2_ws/install/nav2_bringup:/home/laura/ros2_ws/install/navigation2:/home/laura/ros2_ws/install/nav2_smoother:/home/laura/ros2_ws/install/nav2_dwb_controller:/home/laura/ros2_ws/install/nav2_controller:/home/laura/ros2_ws/install/dwb_plugins:/home/laura/ros2_ws/install/dwb_critics:/home/laura/ros2_ws/install/dwb_core:/home/laura/ros2_ws/install/nav_2d_utils:/home/laura/ros2_ws/install/dwb_msgs:/home/laura/ros2_ws/install/nav_2d_msgs:/home/laura/ros2_ws/install/nav2_waypoint_follower:/home/laura/ros2_ws/install/nav2_theta_star_planner:/home/laura/ros2_ws/install/nav2_smac_planner:/home/laura/ros2_ws/install/nav2_rotation_shim_controller:/home/laura/ros2_ws/install/nav2_regulated_pure_pursuit_controller:/home/laura/ros2_ws/install/nav2_planner:/home/laura/ros2_ws/install/nav2_navfn_planner:/home/laura/ros2_ws/install/nav2_mppi_controller:/home/laura/ros2_ws/install/nav2_constrained_smoother:/home/laura/ros2_ws/install/nav2_bt_navigator:/home/laura/ros2_ws/install/nav2_behaviors:/home/laura/ros2_ws/install/nav2_core:/home/laura/ros2_ws/install/nav2_collision_monitor:/home/laura/ros2_ws/install/costmap_queue:/home/laura/ros2_ws/install/nav2_costmap_2d:/home/laura/ros2_ws/install/nav2_voxel_grid:/home/laura/ros2_ws/install/nav2_velocity_smoother:/home/laura/ros2_ws/install/nav2_rviz_plugins:/home/laura/ros2_ws/install/nav2_map_server:/home/laura/ros2_ws/install/nav2_lifecycle_manager:/home/laura/ros2_ws/install/nav2_behavior_tree:/home/laura/ros2_ws/install/nav2_amcl:/home/laura/ros2_ws/install/nav2_util:/home/laura/ros2_ws/install/nav2_simple_commander:/home/laura/ros2_ws/install/nav2_msgs:/home/laura/ros2_ws/install/nav2_common:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:bb0ba77d-62b1-4677-982b-a40ade48a9ed'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/laura/ros2_ws/build/nav2_amcl'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages:/home/laura/ros2_ws/install/dwb_msgs/local/lib/python3.10/dist-packages:/home/laura/ros2_ws/install/nav_2d_msgs/local/lib/python3.10/dist-packages:/home/laura/ros2_ws/build/nav2_simple_commander:/home/laura/ros2_ws/install/nav2_simple_commander/lib/python3.10/site-packages:/home/laura/ros2_ws/install/nav2_msgs/local/lib/python3.10/dist-packages:/home/laura/ros2_ws/install/nav2_common/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/laura/ros2_ws/install/nav2_util:/home/laura/ros2_ws/install/nav2_msgs:/home/laura/ros2_ws/install/nav2_common:/home/laura/ros2_ws/install/nav2_system_tests:/home/laura/ros2_ws/install/nav2_bringup:/home/laura/ros2_ws/install/navigation2:/home/laura/ros2_ws/install/nav2_smoother:/home/laura/ros2_ws/install/nav2_dwb_controller:/home/laura/ros2_ws/install/nav2_controller:/home/laura/ros2_ws/install/dwb_plugins:/home/laura/ros2_ws/install/dwb_critics:/home/laura/ros2_ws/install/dwb_core:/home/laura/ros2_ws/install/nav_2d_utils:/home/laura/ros2_ws/install/dwb_msgs:/home/laura/ros2_ws/install/nav_2d_msgs:/home/laura/ros2_ws/install/nav2_waypoint_follower:/home/laura/ros2_ws/install/nav2_theta_star_planner:/home/laura/ros2_ws/install/nav2_smac_planner:/home/laura/ros2_ws/install/nav2_rotation_shim_controller:/home/laura/ros2_ws/install/nav2_regulated_pure_pursuit_controller:/home/laura/ros2_ws/install/nav2_planner:/home/laura/ros2_ws/install/nav2_navfn_planner:/home/laura/ros2_ws/install/nav2_mppi_controller:/home/laura/ros2_ws/install/nav2_constrained_smoother:/home/laura/ros2_ws/install/nav2_bt_navigator:/home/laura/ros2_ws/install/nav2_behaviors:/home/laura/ros2_ws/install/nav2_core:/home/laura/ros2_ws/install/nav2_collision_monitor:/home/laura/ros2_ws/install/costmap_queue:/home/laura/ros2_ws/install/nav2_costmap_2d:/home/laura/ros2_ws/install/nav2_voxel_grid:/home/laura/ros2_ws/install/nav2_velocity_smoother:/home/laura/ros2_ws/install/nav2_rviz_plugins:/home/laura/ros2_ws/install/nav2_map_server:/home/laura/ros2_ws/install/nav2_lifecycle_manager:/home/laura/ros2_ws/install/nav2_behavior_tree:/home/laura/ros2_ws/install/nav2_amcl:/home/laura/test_msgs:/home/laura/ros2_ws/install/save_pointcloud:/home/laura/ros2_ws/install/nav2_simple_commander:/opt/ros/humble')]), 'shell': False}
+[39.672150] (nav2_amcl) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[39.673519] (nav2_amcl) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[39.674303] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/lib/libpf_lib.so\n'}
+[39.674822] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/lib/libmap_lib.so\n'}
+[39.675554] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/lib/libmotions_lib.so\n'}
+[39.676187] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/lib/libsensors_lib.so\n'}
+[39.677292] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/lib/libamcl_core.so\n'}
+[39.678040] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/lib/nav2_amcl/amcl\n'}
+[39.679239] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/amcl_node.hpp\n'}
+[39.679590] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/angleutils.hpp\n'}
+[39.679992] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/map/map.hpp\n'}
+[39.680391] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/motion_model/differential_motion_model.hpp\n'}
+[39.680776] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/motion_model/motion_model.hpp\n'}
+[39.681068] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/motion_model/omni_motion_model.hpp\n'}
+[39.681510] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/pf/eig3.hpp\n'}
+[39.681821] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/pf/pf.hpp\n'}
+[39.682098] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/pf/pf_kdtree.hpp\n'}
+[39.682387] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/pf/pf_pdf.hpp\n'}
+[39.682747] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/pf/pf_vector.hpp\n'}
+[39.683052] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/portable_utils.hpp\n'}
+[39.683529] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/include//nav2_amcl/sensors/laser/laser.hpp\n'}
+[39.683959] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/environment/library_path.sh\n'}
+[39.684264] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/environment/library_path.dsv\n'}
+[39.684840] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl//plugins.xml\n'}
+[39.685169] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/ament_index/resource_index/package_run_dependencies/nav2_amcl\n'}
+[39.685664] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/ament_index/resource_index/parent_prefix_path/nav2_amcl\n'}
+[39.686036] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/environment/ament_prefix_path.sh\n'}
+[39.686343] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/environment/ament_prefix_path.dsv\n'}
+[39.686742] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/environment/path.sh\n'}
+[39.687045] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/environment/path.dsv\n'}
+[39.687436] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/local_setup.bash\n'}
+[39.687826] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/local_setup.sh\n'}
+[39.688184] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/local_setup.zsh\n'}
+[39.688487] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/local_setup.dsv\n'}
+[39.688798] (nav2_amcl) StdoutLine: {'line': b'-- Symlinking: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/package.dsv\n'}
+[39.701952] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/ament_index/resource_index/packages/nav2_amcl\n'}
+[39.702394] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/ament_index/resource_index/nav2_amcl__pluginlib__plugin/nav2_amcl\n'}
+[39.702888] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/ament_index/resource_index/rclcpp_components/nav2_amcl\n'}
+[39.703317] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[39.703701] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[39.704101] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[39.704669] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/cmake/nav2_amclConfig.cmake\n'}
+[39.705038] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/cmake/nav2_amclConfig-version.cmake\n'}
+[39.705390] (nav2_amcl) StdoutLine: {'line': b'-- Up-to-date symlink: /home/laura/ros2_ws/install/nav2_amcl/share/nav2_amcl/package.xml\n'}
+[39.708709] (nav2_amcl) CommandEnded: {'returncode': 0}
+[39.737904] (-) TimerEvent: {}
+[39.814402] (nav2_amcl) JobEnded: {'identifier': 'nav2_amcl', 'rc': 0}
+[39.815234] (-) EventReactorShutdown: {}

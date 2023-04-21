@@ -64,23 +64,23 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
   RCLCPP_INFO(get_logger(), "Creating");
 
   add_parameter(
-    "alpha1", rclcpp::ParameterValue(0.2),
+    "alpha1", rclcpp::ParameterValue(0.02),
     "This is the alpha1 parameter", "These are additional constraints for alpha1");
 
   add_parameter(
-    "alpha2", rclcpp::ParameterValue(0.2),
+    "alpha2", rclcpp::ParameterValue(0.01),
     "This is the alpha2 parameter", "These are additional constraints for alpha2");
 
   add_parameter(
-    "alpha3", rclcpp::ParameterValue(0.2),
+    "alpha3", rclcpp::ParameterValue(0.01),
     "This is the alpha3 parameter", "These are additional constraints for alpha3");
 
   add_parameter(
-    "alpha4", rclcpp::ParameterValue(0.2),
+    "alpha4", rclcpp::ParameterValue(0.02),
     "This is the alpha4 parameter", "These are additional constraints for alpha4");
 
   add_parameter(
-    "alpha5", rclcpp::ParameterValue(0.2),
+    "alpha5", rclcpp::ParameterValue(0.02),
     "This is the alpha5 parameter", "These are additional constraints for alpha5");
 
   add_parameter(
@@ -105,7 +105,7 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
     "Maximum distance to do obstacle inflation on map, for use in likelihood_field model");
 
   add_parameter(
-    "laser_max_range", rclcpp::ParameterValue(100.0),
+    "laser_max_range", rclcpp::ParameterValue(-1.0),
     "Maximum scan range to be considered",
     "-1.0 will cause the laser's reported maximum range to be used");
 
@@ -145,7 +145,7 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
     "How many evenly-spaced beams in each scan to be used when updating the filter");
 
   add_parameter(
-    "max_particles", rclcpp::ParameterValue(2000),
+    "max_particles", rclcpp::ParameterValue(5000),
     "Minimum allowed number of particles");
 
   add_parameter(
@@ -192,7 +192,7 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
     "the odometry frame");
 
   add_parameter(
-    "transform_tolerance", rclcpp::ParameterValue(1.0),
+    "transform_tolerance", rclcpp::ParameterValue(0.2),
     "Time with which to post-date the transform that is published, to indicate that this transform "
     "is valid into the future");
 
@@ -201,7 +201,7 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
     "Rotational movement required before performing a filter update");
 
   add_parameter(
-    "update_min_d", rclcpp::ParameterValue(0.25),
+    "update_min_d", rclcpp::ParameterValue(0.2),
     "Translational movement required before performing a filter update");
 
   add_parameter("z_hit", rclcpp::ParameterValue(0.5));
