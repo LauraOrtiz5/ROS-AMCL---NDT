@@ -64,23 +64,23 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
   RCLCPP_INFO(get_logger(), "Creating");
 
   add_parameter(
-    "alpha1", rclcpp::ParameterValue(0.02),
+    "alpha1", rclcpp::ParameterValue(0.05),
     "This is the alpha1 parameter", "These are additional constraints for alpha1");
 
   add_parameter(
-    "alpha2", rclcpp::ParameterValue(0.01),
+    "alpha2", rclcpp::ParameterValue(0.05),
     "This is the alpha2 parameter", "These are additional constraints for alpha2");
 
   add_parameter(
-    "alpha3", rclcpp::ParameterValue(0.01),
+    "alpha3", rclcpp::ParameterValue(0.05),
     "This is the alpha3 parameter", "These are additional constraints for alpha3");
 
   add_parameter(
-    "alpha4", rclcpp::ParameterValue(0.02),
+    "alpha4", rclcpp::ParameterValue(0.05),
     "This is the alpha4 parameter", "These are additional constraints for alpha4");
 
   add_parameter(
-    "alpha5", rclcpp::ParameterValue(0.02),
+    "alpha5", rclcpp::ParameterValue(0.05),
     "This is the alpha5 parameter", "These are additional constraints for alpha5");
 
   add_parameter(
@@ -105,7 +105,7 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
     "Maximum distance to do obstacle inflation on map, for use in likelihood_field model");
 
   add_parameter(
-    "laser_max_range", rclcpp::ParameterValue(-1.0),
+    "laser_max_range", rclcpp::ParameterValue(100.0),
     "Maximum scan range to be considered",
     "-1.0 will cause the laser's reported maximum range to be used");
 
@@ -141,32 +141,32 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
     "Yaw of the initial robot pose in the map frame");
 
   add_parameter(
-    "max_beams", rclcpp::ParameterValue(60),
+    "max_beams", rclcpp::ParameterValue(128),
     "How many evenly-spaced beams in each scan to be used when updating the filter");
 
   add_parameter(
-    "max_particles", rclcpp::ParameterValue(5000),
+    "max_particles", rclcpp::ParameterValue(7000),
     "Minimum allowed number of particles");
 
   add_parameter(
-    "min_particles", rclcpp::ParameterValue(500),
+    "min_particles", rclcpp::ParameterValue(2000),
     "Maximum allowed number of particles");
 
   add_parameter(
     "odom_frame_id", rclcpp::ParameterValue(std::string("odom")),
     "Which frame to use for odometry");
 
-  add_parameter("pf_err", rclcpp::ParameterValue(0.05));
-  add_parameter("pf_z", rclcpp::ParameterValue(0.99));
+  add_parameter("pf_err", rclcpp::ParameterValue(0.5));
+  add_parameter("pf_z", rclcpp::ParameterValue(0.8));
 
   add_parameter(
-    "recovery_alpha_fast", rclcpp::ParameterValue(0.0),
+    "recovery_alpha_fast", rclcpp::ParameterValue(0.01),
     "Exponential decay rate for the fast average weight filter, used in deciding when to recover "
     "by adding random poses",
     "A good value might be 0.1");
 
   add_parameter(
-    "recovery_alpha_slow", rclcpp::ParameterValue(0.0),
+    "recovery_alpha_slow", rclcpp::ParameterValue(0.001),
     "Exponential decay rate for the slow average weight filter, used in deciding when to recover "
     "by adding random poses",
     "A good value might be 0.001");
@@ -192,22 +192,22 @@ AmclNode::AmclNode(const rclcpp::NodeOptions & options)
     "the odometry frame");
 
   add_parameter(
-    "transform_tolerance", rclcpp::ParameterValue(0.2),
+    "transform_tolerance", rclcpp::ParameterValue(1.0),
     "Time with which to post-date the transform that is published, to indicate that this transform "
     "is valid into the future");
 
   add_parameter(
-    "update_min_a", rclcpp::ParameterValue(0.2),
+    "update_min_a", rclcpp::ParameterValue(0.1),
     "Rotational movement required before performing a filter update");
 
   add_parameter(
-    "update_min_d", rclcpp::ParameterValue(0.2),
+    "update_min_d", rclcpp::ParameterValue(0.07),
     "Translational movement required before performing a filter update");
 
-  add_parameter("z_hit", rclcpp::ParameterValue(0.5));
+  add_parameter("z_hit", rclcpp::ParameterValue(0.8));
   add_parameter("z_max", rclcpp::ParameterValue(0.05));
-  add_parameter("z_rand", rclcpp::ParameterValue(0.5));
-  add_parameter("z_short", rclcpp::ParameterValue(0.05));
+  add_parameter("z_rand", rclcpp::ParameterValue(0.2));
+  add_parameter("z_short", rclcpp::ParameterValue(0.005));
 
   add_parameter(
     "always_reset_initial_pose", rclcpp::ParameterValue(false),

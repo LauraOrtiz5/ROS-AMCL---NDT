@@ -4,6 +4,9 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 import rospy
+from geometry_msgs.msg import TransformStamped
+from tf2_geometry_msgs import PointStamped
+import time
 from sensor_msgs.msg import LaserScan
 from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSHistoryPolicy
 import pandas as pd
@@ -36,15 +39,12 @@ class FrameListener(Node):
         
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
-        # self.tf_buffer = tf2_ros.Buffer(self, cache_time=rospy.Duration(1000.0))
-        # self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self, spin_thread=True, spin_rate=10, timeout=rospy.Duration(5.0))
 
-        # List of dictionaries to store the transformation info
-        # self.transform_list = []
+        # Create a publisher for the transformed point cloud
+        self.pc_pub = self.create_publisher(PointStamped, 'transformed_point_cloud', 10)
 
         # Call on_timer function every second
-        # self.timer_callback_group = CallbackGroup()
-        # self.timer = self.create_timer(1.0, self.on_timer, callback_group = self.timer_callback_group)
+
         self.timer = self.create_timer(1.0, self.on_timer)
 
         # Initialize variables to keep track of failures
@@ -52,7 +52,6 @@ class FrameListener(Node):
         self.max_num_failures = 5
 
     def scan_callback(self, scan):
-        #print("Received scan data:", scan)
         global point_cloud_data, table_scan, table_tf
 
         ranges = np.array(scan.ranges)
@@ -70,40 +69,30 @@ class FrameListener(Node):
         points = np.vstack((x, y, z)).T
 
         # Get the latest transform from /base_scan to /odom
-        # self.tf_buffer = tf2_ros.Buffer()
-        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
+        # self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
-        
-        points_transformed = np.array([])
+        # points_transformed = np.array([])
 
         try:
-            transform_stamped = self.tf_buffer.lookup_transform('odom', 'base_scan', scan.header.stamp)
-            print(transform_stamped)
-            
-            translation = [transform_stamped.transform.translation.x, 
-                           transform_stamped.transform.translation.y,
-                           transform_stamped.transform.translation.z]
-            rotation = [transform_stamped.transform.rotation.x,
-                        transform_stamped.transform.rotation.y,
-                        transform_stamped.transform.rotation.z,
-                        transform_stamped.transform.rotation.w]
-            
-            R = np.array([    [1 - 2 * (rotation[1]**2 + rotation[2]**2), 2 * (rotation[0] * rotation[1] - rotation[2] * rotation[3]), 2 * (rotation[0] * rotation[2] + rotation[1] * rotation[3]), translation[0]],
-                          [2 * (rotation[0] * rotation[1] + rotation[2] * rotation[3]), 1 - 2 * (rotation[0]**2 + rotation[2]**2), 2 * (rotation[1] * rotation[2] - rotation[0] * rotation[3]), translation[1]],
-                          [2 * (rotation[0] * rotation[2] - rotation[1] * rotation[3]), 2 * (rotation[1] * rotation[2] + rotation[0] * rotation[3]), 1 - 2 * (rotation[0]**2 + rotation[1]**2), translation[2]],
-                          [0, 0, 0, 1]])
-            # Apply the transform to the point cloud
-            # points_transformed = []
-            for point in points:
-                points_homogeneous = np.hstack((points, np.ones((points.shape[0], 1))))
-                points_transformed = np.dot(R, points_homogeneous.T).T[:, :3]
-                   
+            # transform_stamped = self.tf_buffer.lookup_transform('odom', 'base_scan', scan.header.stamp)
+            transform_stamped = self.tf_buffer.lookup_transform(self.target_frame, scan.header.frame_id, scan.header.stamp, timeout=rclpy.duration.Duration(seconds=1.0))
+            transform_matrix = tf2_ros.transform_to_matrix(transform_stamped)
+            points_transformed = self.transform_points(points, transform_matrix)
+
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as ex:
-            rospy.logwarn(f"Could not transform point cloud. This was the exception:{ex}\n")
+            self.get_logger().warn("Could not transform point cloud. This was the exception: {}".format(ex))
 
         # Append the transformed points to the list
         if len(points_transformed) > 0:
             point_cloud_data.extend(points_transformed.tolist())
+            for point in points_transformed:
+                ps = PointStamped()
+                ps.header.frame_id = self.target_frame
+                ps.header.stamp = scan.header.stamp
+                ps.point.x = point[0]
+                ps.point.y = point[1]
+                ps.point.z = point[2]
+                self.pc_pub.publish(ps)
             
         # point_cloud_data.extend(points_transformed.tolist())
 
@@ -166,7 +155,9 @@ class FrameListener(Node):
                               'qw': t.transform.rotation.w}
             
             # Add transformation info to the list
-            table_tf = table_tf.append(transform_dict, ignore_index=True)
+            # Pandas new command to append
+            df_transform = pd.DataFrame(transform_dict, index=[0])
+            table_tf = pd.concat([table_tf, df_transform], ignore_index=True)
             
         except TransformException as ex:
             self.get_logger().info(f'Could not transform {to_frame_rel} to {from_frame_rel}: {ex}')
@@ -186,15 +177,7 @@ def main(args=None):
     node = FrameListener()
 
     qos_profile = QoSProfile(depth=10)
-    # qos_profile = QoSProfile(
-    # reliability=QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_RELIABLE,
-    # history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
-    # depth=10)
-    sub = node.create_subscription(LaserScan, '/lidar', node.scan_callback, qos_profile=qos_profile)
-
-    # executor = SingleThreadedExecutor()
-    # executor.add_node(node)
-    # executor.spin()
+    sub = node.create_subscription(LaserScan, '/scan', node.scan_callback, qos_profile=qos_profile)
 
     rclpy.spin(node)
 
