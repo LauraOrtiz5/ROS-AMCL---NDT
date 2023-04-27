@@ -76,23 +76,33 @@ class FrameListener(Node):
         try:
             # transform_stamped = self.tf_buffer.lookup_transform('odom', 'base_scan', scan.header.stamp)
             transform_stamped = self.tf_buffer.lookup_transform(self.target_frame, scan.header.frame_id, scan.header.stamp, timeout=rclpy.duration.Duration(seconds=1.0))
-            transform_matrix = tf2_ros.transform_to_matrix(transform_stamped)
-            points_transformed = self.transform_points(points, transform_matrix)
 
+            # print(transform_stamped)
+            
+            translation = [transform_stamped.transform.translation.x, 
+                           transform_stamped.transform.translation.y,
+                           transform_stamped.transform.translation.z]
+            rotation = [transform_stamped.transform.rotation.x,
+                        transform_stamped.transform.rotation.y,
+                        transform_stamped.transform.rotation.z,
+                        transform_stamped.transform.rotation.w]
+            
+            R = np.array([    [1 - 2 * (rotation[1]**2 + rotation[2]**2), 2 * (rotation[0] * rotation[1] - rotation[2] * rotation[3]), 2 * (rotation[0] * rotation[2] + rotation[1] * rotation[3]), translation[0]],
+                          [2 * (rotation[0] * rotation[1] + rotation[2] * rotation[3]), 1 - 2 * (rotation[0]**2 + rotation[2]**2), 2 * (rotation[1] * rotation[2] - rotation[0] * rotation[3]), translation[1]],
+                          [2 * (rotation[0] * rotation[2] - rotation[1] * rotation[3]), 2 * (rotation[1] * rotation[2] + rotation[0] * rotation[3]), 1 - 2 * (rotation[0]**2 + rotation[1]**2), translation[2]],
+                          [0, 0, 0, 1]])
+            # Apply the transform to the point cloud
+
+            for point in points:
+                points_homogeneous = np.hstack((points, np.ones((points.shape[0], 1))))
+                points_transformed = np.dot(R, points_homogeneous.T).T[:, :3]
+                   
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as ex:
-            self.get_logger().warn("Could not transform point cloud. This was the exception: {}".format(ex))
+            rospy.logwarn(f"Could not transform point cloud. This was the exception:{ex}\n")
 
         # Append the transformed points to the list
         if len(points_transformed) > 0:
             point_cloud_data.extend(points_transformed.tolist())
-            for point in points_transformed:
-                ps = PointStamped()
-                ps.header.frame_id = self.target_frame
-                ps.header.stamp = scan.header.stamp
-                ps.point.x = point[0]
-                ps.point.y = point[1]
-                ps.point.z = point[2]
-                self.pc_pub.publish(ps)
             
         # point_cloud_data.extend(points_transformed.tolist())
 

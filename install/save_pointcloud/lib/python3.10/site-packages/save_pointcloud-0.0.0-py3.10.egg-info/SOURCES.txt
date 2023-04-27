@@ -10,6 +10,7 @@ setup.py
 ../../build/save_pointcloud/save_pointcloud.egg-info/zip-safe
 resource/save_pointcloud
 save_pointcloud/General.py
+save_pointcloud/General_loop.py
 save_pointcloud/General_original.py
 save_pointcloud/InitialPose.py
 save_pointcloud/Pointcloud.py
