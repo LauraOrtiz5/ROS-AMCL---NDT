@@ -1,0 +1,1 @@
+/home/laura/ros2_ws/build/nav2_msgs/rosidl_cmake/srv/ClearEntireCostmap_Response.msg

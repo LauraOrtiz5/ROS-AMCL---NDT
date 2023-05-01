@@ -1,0 +1,33 @@
+running develop
+running egg_info
+writing ../../build/save_pointcloud/save_pointcloud.egg-info/PKG-INFO
+writing dependency_links to ../../build/save_pointcloud/save_pointcloud.egg-info/dependency_links.txt
+writing entry points to ../../build/save_pointcloud/save_pointcloud.egg-info/entry_points.txt
+writing requirements to ../../build/save_pointcloud/save_pointcloud.egg-info/requires.txt
+writing top-level names to ../../build/save_pointcloud/save_pointcloud.egg-info/top_level.txt
+reading manifest file '../../build/save_pointcloud/save_pointcloud.egg-info/SOURCES.txt'
+writing manifest file '../../build/save_pointcloud/save_pointcloud.egg-info/SOURCES.txt'
+running build
+running build_py
+copying save_pointcloud/General.py -> /home/laura/ros2_ws/build/save_pointcloud/build/lib/save_pointcloud
+running install
+running install_lib
+copying /home/laura/ros2_ws/build/save_pointcloud/build/lib/save_pointcloud/General.py -> /home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages/save_pointcloud
+byte-compiling /home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages/save_pointcloud/General.py to General.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages/save_pointcloud-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/save_pointcloud/save_pointcloud.egg-info to /home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages/save_pointcloud-0.0.0-py3.10.egg-info
+running install_scripts
+Installing columns script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing combi script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing general script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing initialpose script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing savepc script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing scan_table script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing subsmap script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing subspc script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing tf script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing tfcol script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+Installing transform script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+writing list of installed files to '/home/laura/ros2_ws/build/save_pointcloud/install.log'

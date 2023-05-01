@@ -1,0 +1,15 @@
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/ament_index/resource_index/package_run_dependencies/nav2_dwb_controller
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/ament_index/resource_index/parent_prefix_path/nav2_dwb_controller
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/ament_prefix_path.sh
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/ament_prefix_path.dsv
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/path.sh
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/environment/path.dsv
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.bash
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.sh
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.zsh
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/local_setup.dsv
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/package.dsv
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/ament_index/resource_index/packages/nav2_dwb_controller
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/cmake/nav2_dwb_controllerConfig.cmake
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/cmake/nav2_dwb_controllerConfig-version.cmake
+/home/laura/ros2_ws/install/nav2_dwb_controller/share/nav2_dwb_controller/package.xml

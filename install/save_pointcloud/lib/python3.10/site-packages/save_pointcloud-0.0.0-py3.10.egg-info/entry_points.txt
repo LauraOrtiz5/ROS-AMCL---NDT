@@ -1,0 +1,13 @@
+[console_scripts]
+columns = save_pointcloud.combi_columns:main
+combi = save_pointcloud.combi:main
+general = save_pointcloud.General:main
+initialpose = save_pointcloud.InitialPose:main
+savepc = save_pointcloud.save_pointcloud:main
+scan_table = save_pointcloud.save_pointcloud_table:main
+subsmap = save_pointcloud.subs_to_map:main
+subspc = save_pointcloud.subscribe_to_scan:main
+tf = save_pointcloud.tflisten:main
+tfcol = save_pointcloud.tf_columns:main
+transform = save_pointcloud.transform:main
+

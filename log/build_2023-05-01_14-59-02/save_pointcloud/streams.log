@@ -1,0 +1,50 @@
+[0.975s] Invoking command in '/home/laura/ros2_ws/build/save_pointcloud': PYTHONPATH=/home/laura/ros2_ws/build/save_pointcloud/prefix_override:/home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/laura/ros2_ws/build/save_pointcloud/build
+[1.343s] running develop
+[1.344s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.344s]   warnings.warn(
+[1.346s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.346s]   warnings.warn(
+[1.437s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[1.438s]   warnings.warn(
+[1.438s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[1.438s]   warnings.warn(
+[1.438s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[1.439s]   warnings.warn(
+[1.671s] Invoked command in '/home/laura/ros2_ws/build/save_pointcloud' returned '0': PYTHONPATH=/home/laura/ros2_ws/build/save_pointcloud/prefix_override:/home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/laura/ros2_ws/build/save_pointcloud/build
+[1.673s] Invoking command in '/home/laura/ros2_ws/src/save_pointcloud': PYTHONPATH=/home/laura/ros2_ws/build/save_pointcloud/prefix_override:/home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/save_pointcloud build --build-base /home/laura/ros2_ws/build/save_pointcloud/build install --record /home/laura/ros2_ws/build/save_pointcloud/install.log --single-version-externally-managed
+[2.016s] running egg_info
+[2.018s] writing ../../build/save_pointcloud/save_pointcloud.egg-info/PKG-INFO
+[2.018s] writing dependency_links to ../../build/save_pointcloud/save_pointcloud.egg-info/dependency_links.txt
+[2.019s] writing entry points to ../../build/save_pointcloud/save_pointcloud.egg-info/entry_points.txt
+[2.019s] writing requirements to ../../build/save_pointcloud/save_pointcloud.egg-info/requires.txt
+[2.019s] writing top-level names to ../../build/save_pointcloud/save_pointcloud.egg-info/top_level.txt
+[2.021s] package init file 'save_pointcloud/__init__.py' not found (or not a regular file)
+[2.022s] reading manifest file '../../build/save_pointcloud/save_pointcloud.egg-info/SOURCES.txt'
+[2.023s] writing manifest file '../../build/save_pointcloud/save_pointcloud.egg-info/SOURCES.txt'
+[2.024s] running build
+[2.024s] running build_py
+[2.024s] copying save_pointcloud/General.py -> /home/laura/ros2_ws/build/save_pointcloud/build/lib/save_pointcloud
+[2.026s] running install
+[2.026s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.026s]   warnings.warn(
+[2.026s] running install_lib
+[2.028s] copying /home/laura/ros2_ws/build/save_pointcloud/build/lib/save_pointcloud/General.py -> /home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages/save_pointcloud
+[2.029s] byte-compiling /home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages/save_pointcloud/General.py to General.cpython-310.pyc
+[2.031s] running install_data
+[2.032s] running install_egg_info
+[2.034s] removing '/home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages/save_pointcloud-0.0.0-py3.10.egg-info' (and everything under it)
+[2.034s] Copying ../../build/save_pointcloud/save_pointcloud.egg-info to /home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages/save_pointcloud-0.0.0-py3.10.egg-info
+[2.035s] running install_scripts
+[2.061s] Installing columns script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.061s] Installing combi script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.061s] Installing general script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.062s] Installing initialpose script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.062s] Installing savepc script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.062s] Installing scan_table script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.062s] Installing subsmap script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.062s] Installing subspc script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.062s] Installing tf script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.062s] Installing tfcol script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.063s] Installing transform script to /home/laura/ros2_ws/install/save_pointcloud/lib/save_pointcloud
+[2.063s] writing list of installed files to '/home/laura/ros2_ws/build/save_pointcloud/install.log'
+[2.099s] Invoked command in '/home/laura/ros2_ws/src/save_pointcloud' returned '0': PYTHONPATH=/home/laura/ros2_ws/build/save_pointcloud/prefix_override:/home/laura/ros2_ws/install/save_pointcloud/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/save_pointcloud build --build-base /home/laura/ros2_ws/build/save_pointcloud/build install --record /home/laura/ros2_ws/build/save_pointcloud/install.log --single-version-externally-managed
