@@ -4,9 +4,6 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 import rospy
-from geometry_msgs.msg import TransformStamped
-from tf2_geometry_msgs import PointStamped
-import time
 from sensor_msgs.msg import LaserScan
 from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSHistoryPolicy
 import pandas as pd
@@ -18,6 +15,7 @@ from geometry_msgs.msg import Twist
 from tf2_ros import TransformException
 from tf2_ros.buffer import Buffer
 from tf2_ros.transform_listener import TransformListener
+# from turtlesim.srv import Spawn
 from rclpy.duration import Duration
 from rosgraph_msgs.msg import Log
 
@@ -39,19 +37,24 @@ class FrameListener(Node):
         
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
+        # self.tf_buffer = tf2_ros.Buffer(self, cache_time=rospy.Duration(1000.0))
+        # self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self, spin_thread=True, spin_rate=10, timeout=rospy.Duration(5.0))
 
-        # Create a publisher for the transformed point cloud
-        self.pc_pub = self.create_publisher(PointStamped, 'transformed_point_cloud', 10)
+        # List of dictionaries to store the transformation info
+        # self.transform_list = []
 
         # Call on_timer function every second
-
+        # self.timer_callback_group = CallbackGroup()
+        # self.timer = self.create_timer(1.0, self.on_timer, callback_group = self.timer_callback_group)
         self.timer = self.create_timer(1.0, self.on_timer)
+       
 
         # Initialize variables to keep track of failures
         self.num_consecutive_failures = 0
         self.max_num_failures = 5
 
     def scan_callback(self, scan):
+        #print("Received scan data:", scan)
         global point_cloud_data, table_scan, table_tf
 
         ranges = np.array(scan.ranges)
@@ -69,15 +72,15 @@ class FrameListener(Node):
         points = np.vstack((x, y, z)).T
 
         # Get the latest transform from /base_scan to /odom
-        # self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
+        # self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
-        # points_transformed = np.array([])
+        
+        points_transformed = np.array([])
 
         try:
-            # transform_stamped = self.tf_buffer.lookup_transform('odom', 'base_scan', scan.header.stamp)
-            transform_stamped = self.tf_buffer.lookup_transform(self.target_frame, scan.header.frame_id, scan.header.stamp, timeout=rclpy.duration.Duration(seconds=1.0))
-
-            # print(transform_stamped)
+            transform_stamped = self.tf_buffer.lookup_transform('odom', 'base_scan', scan.header.stamp)
+            print(transform_stamped)
             
             translation = [transform_stamped.transform.translation.x, 
                            transform_stamped.transform.translation.y,
@@ -92,7 +95,7 @@ class FrameListener(Node):
                           [2 * (rotation[0] * rotation[2] - rotation[1] * rotation[3]), 2 * (rotation[1] * rotation[2] + rotation[0] * rotation[3]), 1 - 2 * (rotation[0]**2 + rotation[1]**2), translation[2]],
                           [0, 0, 0, 1]])
             # Apply the transform to the point cloud
-
+            # points_transformed = []
             for point in points:
                 points_homogeneous = np.hstack((points, np.ones((points.shape[0], 1))))
                 points_transformed = np.dot(R, points_homogeneous.T).T[:, :3]
@@ -101,10 +104,7 @@ class FrameListener(Node):
             rospy.logwarn(f"Could not transform point cloud. This was the exception:{ex}\n")
 
         # Append the transformed points to the list
-        if len(points_transformed) > 0:
-            point_cloud_data.extend(points_transformed.tolist())
-            
-        # point_cloud_data.extend(points_transformed.tolist())
+        point_cloud_data.extend(points_transformed.tolist())
 
         with open ('/home/laura/ros2_ws/src/save_pointcloud/save_pointcloud/pcd_files/Transf.pcd','wb') as f:
             f.write(b'# .PCD v0.7 - Point Cloud Data file format\n')
@@ -147,7 +147,7 @@ class FrameListener(Node):
         points_transformed_homogeneous = np.dot(transform_matrix, points_homogeneous.T)
         return points_transformed_homogeneous[:3,:].T
     
-    def on_timer(self):
+    def on_Timer(self):
         global table_tf
         # Store frame names in variables that will be used to compute transformations
         from_frame_rel = self.target_frame
@@ -165,9 +165,7 @@ class FrameListener(Node):
                               'qw': t.transform.rotation.w}
             
             # Add transformation info to the list
-            # Pandas new command to append
-            df_transform = pd.DataFrame(transform_dict, index=[0])
-            table_tf = pd.concat([table_tf, df_transform], ignore_index=True)
+            table_tf = table_tf.append(transform_dict, ignore_index=True)
             
         except TransformException as ex:
             self.get_logger().info(f'Could not transform {to_frame_rel} to {from_frame_rel}: {ex}')
@@ -187,7 +185,15 @@ def main(args=None):
     node = FrameListener()
 
     qos_profile = QoSProfile(depth=10)
+    # qos_profile = QoSProfile(
+    # reliability=QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_RELIABLE,
+    # history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
+    # depth=10)
     sub = node.create_subscription(LaserScan, '/scan', node.scan_callback, qos_profile=qos_profile)
+
+    # executor = SingleThreadedExecutor()
+    # executor.add_node(node)
+    # executor.spin()
 
     rclpy.spin(node)
 
